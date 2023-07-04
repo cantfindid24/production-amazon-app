@@ -1,7 +1,6 @@
 const data = {
   products: [
     {
-      _id: '1',
       name: 'Nike Slim Shirt',
       category: 'Shirts',
       image: '/images/p1.jpg',
@@ -13,7 +12,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
       name: 'Levis Denim',
       category: 'Pant',
       image: '/images/p2.jpg',
@@ -25,7 +23,6 @@ const data = {
       description: 'high stretch product',
     },
     {
-      _id: '3',
       name: 'lee brill Pant',
       slug: 'lee-brill-pant',
       category: 'Pant',
@@ -38,7 +35,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
       name: 'Raymond Formal Shirt',
       category: 'Shirts',
       image: '/images/p4.jpg',
@@ -50,7 +46,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
       name: 'Polo Round Shirt',
       category: 'Shirts',
       image: '/images/p5.jpg',
@@ -62,7 +57,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
       name: 'Adidas Jogger Pant',
       category: 'Pant',
       image: '/images/p6.jpg',
@@ -74,7 +68,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '7',
       name: 'Firebolt smart watch',
       slug: 'firebolt-smart-watch',
       category: 'watches',
@@ -87,7 +80,6 @@ const data = {
       description: 'high quality watch ',
     },
     {
-      _id: '8',
       name: 'Pearl Jhumka',
       slug: 'peral-jhumki-jhumki-earing',
       category: 'Jwellery',
