@@ -9,19 +9,19 @@ import { getError } from './../utils';
 import { toast } from 'react-toastify';
 
 export default function Footer() {
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const { data } = await axios.get(`/api/products/categories`);
-        setCategories(data);
-      } catch (err) {
-        toast.error(getError(err));
-      }
-    };
-    fetchCategories();
-  }, []);
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/products/categories`);
+  //       setCategories(data);
+  //     } catch (err) {
+  //       toast.error(getError(err));
+  //     }
+  //   };
+  //   fetchCategories();
+  // }, []);
 
   return (
     <div className="footer">
@@ -41,7 +41,7 @@ export default function Footer() {
             <img src={logo} alt="footer/logo" />
           </div>
           <Nav className="nav">
-            {categories.map((category) => (
+            {/* {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
                   to={{
@@ -52,7 +52,7 @@ export default function Footer() {
                   <Nav.Link> {category}</Nav.Link>
                 </LinkContainer>
               </Nav.Item>
-            ))}
+            ))} */}
 
             <Nav.Item>
               <Nav.Link className="text-white">Puma</Nav.Link>
