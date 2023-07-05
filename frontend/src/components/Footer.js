@@ -23,16 +23,21 @@ export default function Footer() {
     fetchCategories();
   }, []);
 
+  const handleScrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="footer">
       <a
         href="#"
         id="navBackToTop"
         aria-label="Back to top"
-        onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0; event.preventDefault();"
+        onClick={handleScrollToTop}
       >
-        <div class="navFooterBackToTop">
-          <span class="navFooterBackToTopText">Back to top</span>
+        <div className="navFooterBackToTop">
+          <span className="navFooterBackToTopText">Back to top</span>
         </div>
       </a>
       <section className="w-100">

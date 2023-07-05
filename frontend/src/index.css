@@ -6,8 +6,6 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: black; */
-  /* background-color: rgb(245, 244, 244); */
 }
 html {
   scroll-behavior: smooth;
@@ -102,43 +100,103 @@ main {
   left: -3rem;
 }
 /* --------------Sidebar----------------- */
-.closeBtn {
-  margin-left: 8px;
-}
-.side-navbar {
-  opacity: 1;
-  z-index: 3000;
-  width: 170px;
-  height: 100%;
+.sidebar-container {
   position: fixed;
-  left: -300px;
-  background-color: #100901;
-  /* background-color: #252e36;
-  background-color: #040714;   */
-  transition: 0.5s;
+  min-height: 100vh;
+  min-width: 100%;
+  top: 0;
+  transform: translateX(-100%);
+  /* transition: transform 5s; */
+  z-index: 3000;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.active-nav {
+  transform: translateX(0%);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+  height: 100%;
+  background-color: #fff;
+  width: 290px;
+  color: black;
+  justify-content: start;
+  box-sizing: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+.sidebar-activ {
+  transform: translateX(0px);
+}
+.hmenu-customer-profile {
+  background-color: #232f3e;
+  height: 50px;
+  align-items: center;
+  color: #fff;
+  font-size: 19px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.hmenu-avatar-icon {
+  height: 25px;
+  width: 27px;
+  margin: 0 5px 0 20px;
+  padding: 2px 2px;
+  font-size: 25px;
+}
+.sidebar-content-wrap {
+  height: 100%;
+  overflow: scroll;
+  padding-bottom: 10rem;
+}
+.sidebar-content {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+.sidebar-content-title {
+  width: 100%;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 30px;
+  padding-bottom: 2px;
+}
+.sidebar-content-para {
+  text-transform: capitalize;
+  width: 100%;
+  color: rgb(65, 62, 62);
+  padding-right: 20px;
+  display: flex;
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  line-height: 16px;
+  padding-left: 30px;
+  margin-bottom: 2px;
+}
+
+.sidebar-content p:hover {
+  background-color: rgb(232, 232, 232);
+}
+.closeBtn {
+  font-size: 30px;
+  padding: 10px 10px;
 }
 
 .site-container {
   min-height: 100vh;
   transition: 0.4s;
 }
-.active-cont {
-  margin-left: 165px;
-  /* left: 0; */
-}
-.active-nav {
-  left: 0;
-}
-
-.text-bold {
-  font-weight: bold;
-}
 
 /* -----------------Carousel----------------- */
 .slider {
   overflow: hidden;
   opacity: 1;
-  z-index: 1500;
+  z-index: 10;
   box-shadow: rgb(0 0 0 /69%) 0px 5px 10px -10px,
     rgb(0 0 0 /73%) 0px 6px 10px -10px;
   cursor: default;
@@ -146,10 +204,10 @@ main {
 }
 .slick-prev {
   margin-left: 10%;
-  z-index: 100;
+  z-index: 5;
 }
 .slick-next {
-  z-index: 100;
+  z-index: 5;
   left: 90%;
 }
 /* .slider .slider-img-container {

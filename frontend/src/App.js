@@ -57,13 +57,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <div
-        className={
-          sidebarisopen
-            ? 'd-flex flex-column site-container active-cont'
-            : 'd-flex flex-column site-container'
-        }
-      >
+      <div className={'d-flex flex-column site-container'}>
         <ToastContainer position="bottom-center" limit={1} />
 
         {/* -------Navbar------- */}
@@ -88,7 +82,6 @@ function App() {
                 <i className="fas fa-bars"></i>{' '}
               </Button>
               <LinkContainer to="/">
-                {/* <Navbar.Brand>amazon</Navbar.Brand> */}
                 <Navbar.Brand>
                   <div className="amazon-logo">
                     <img src={logo} alt="amazon" />
@@ -154,53 +147,140 @@ function App() {
             </Container>
           </Navbar>
         </header>
+        {/* -------Sidebar------- */}
         <div
           className={
             sidebarisopen
-              ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+              ? 'active-nav sidebar-container d-flex justify-content-between flex-wrap flex-column'
+              : 'sidebar-container d-flex justify-content-between flex-wrap flex-column'
           }
         >
-          {/* -------Sidebar------- */}
-
-          <Nav className="flex-column text-white w-100 my-2">
-            <p className=" text-white ms-1 ">
-              <i className="fa fa-user text-white px-3"></i>
-              {/* Hello,&nbsp; */}
-              <b>
-                {userInfo ? (
-                  userInfo.name
-                ) : (
-                  <Link className="ms-2" to={`/signin?redirect=${redirect}`}>
-                    User
-                  </Link>
-                )}
-              </b>{' '}
-              <button
-                onClick={() => setSidebarisopen(false)}
-                className="btn closeBtn text-white "
-              >
-                <i className="fas fa-times "></i>
-              </button>
-            </p>
-            <Nav.Item>
-              <strong>Categories</strong>
-            </Nav.Item>
-            {categories.map((category) => (
-              <Nav.Item key={category}>
-                <LinkContainer
-                  to={{
-                    pathname: '/search',
-                    search: `?category=${category}`,
-                  }}
-                  // to={`/search/category=${category}`}
+          <div
+            className={
+              sidebarisopen
+                ? 'flex-column sidebar-activ sidebar '
+                : 'flex-column sidebar'
+            }
+          >
+            <div className="w-100 d-flex hmenu-customer-profile">
+              <div className="hmenu-customer-profile-left  d-flex me-2">
+                <div className="hmenu-avatar-icon d-flex">
+                  <i className="fas fa-solid fa-circle-user text-white"></i>
+                </div>
+              </div>
+              <div className="d-flex hmenu-customer-profile-right w-100">
+                <b>
+                  Hello,{'  '}
+                  {userInfo ? (
+                    userInfo.name
+                  ) : (
+                    <Link
+                      onClick={() => setSidebarisopen(false)}
+                      className="ms-2 text-white"
+                      to={`/signin?redirect=${redirect}`}
+                    >
+                      sign in
+                    </Link>
+                  )}
+                </b>
+              </div>
+              <div className="d-flex">
+                <button
                   onClick={() => setSidebarisopen(false)}
+                  className="btn closeBtn text-white "
                 >
-                  <Nav.Link>{category}</Nav.Link>
-                </LinkContainer>
-              </Nav.Item>
-            ))}
-          </Nav>
+                  <i className="fas fa-thin fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div className="sidebar-content-wrap">
+              <div className="sidebar-content">
+                <h2 className="sidebar-content-title">Categories</h2>
+                {categories.map((category) => (
+                  <p key={category} className="sidebar-content-para">
+                    <LinkContainer
+                      to={{
+                        pathname: '/search',
+                        search: `?category=${category}`,
+                      }}
+                      // to={`/search/category=${category}`}
+                      onClick={() => setSidebarisopen(false)}
+                    >
+                      <Nav.Link>{category}</Nav.Link>
+                    </LinkContainer>
+                  </p>
+                ))}
+              </div>
+              <div className="sidebar-content">
+                <h2 className="sidebar-content-title">Categories</h2>
+                {categories.map((category) => (
+                  <p key={category} className="sidebar-content-para">
+                    <LinkContainer
+                      to={{
+                        pathname: '/search',
+                        search: `?category=${category}`,
+                      }}
+                      // to={`/search/category=${category}`}
+                      onClick={() => setSidebarisopen(false)}
+                    >
+                      <Nav.Link>{category}</Nav.Link>
+                    </LinkContainer>
+                  </p>
+                ))}
+              </div>
+              <div className="sidebar-content">
+                <h2 className="sidebar-content-title">Categories</h2>
+                {categories.map((category) => (
+                  <p key={category} className="sidebar-content-para">
+                    <LinkContainer
+                      to={{
+                        pathname: '/search',
+                        search: `?category=${category}`,
+                      }}
+                      // to={`/search/category=${category}`}
+                      onClick={() => setSidebarisopen(false)}
+                    >
+                      <Nav.Link>{category}</Nav.Link>
+                    </LinkContainer>
+                  </p>
+                ))}
+              </div>
+              <div className="sidebar-content">
+                <h2 className="sidebar-content-title">Categories</h2>
+                {categories.map((category) => (
+                  <p key={category} className="sidebar-content-para">
+                    <LinkContainer
+                      to={{
+                        pathname: '/search',
+                        search: `?category=${category}`,
+                      }}
+                      // to={`/search/category=${category}`}
+                      onClick={() => setSidebarisopen(false)}
+                    >
+                      <Nav.Link>{category}</Nav.Link>
+                    </LinkContainer>
+                  </p>
+                ))}
+              </div>
+              <div className="sidebar-content">
+                <h2 className="sidebar-content-title">Categories</h2>
+                {categories.map((category) => (
+                  <p key={category} className="sidebar-content-para">
+                    <LinkContainer
+                      to={{
+                        pathname: '/search',
+                        search: `?category=${category}`,
+                      }}
+                      // to={`/search/category=${category}`}
+                      onClick={() => setSidebarisopen(false)}
+                    >
+                      <Nav.Link>{category}</Nav.Link>
+                    </LinkContainer>
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* -------Main------- */}
