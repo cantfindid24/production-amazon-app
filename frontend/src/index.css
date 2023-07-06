@@ -131,6 +131,12 @@ main {
 .cart-icon {
   font-size: 20px;
 }
+@media screen and (min-width: 577px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 17px;
+  }
+}
 @media screen and (max-width: 670px) {
   .navbar .dropdown-menu {
     left: 0.5rem;
