@@ -75,29 +75,70 @@ main {
 
 /* --------------Navbar--------------- */
 .navbar {
-  padding: 2px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   box-shadow: 0, 0, 10px rgb(70, 69, 69);
+}
+.nav-hold,
+.nav-left,
+.nav-middle,
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.nav-hold {
+  flex-grow: 1;
+}
+.nav-middle {
+  margin-left: 5px;
+  margin-right: 10px;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-right {
+  padding-right: 50px;
+  margin-bottom: 5px;
 }
 .amazon-logo {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 .amazon-logo img {
-  width: 103px;
-  height: 31px;
-  margin-top: 15px;
+  width: 78px;
+  height: 25px;
+  margin-top: 10px;
 }
 .amazon-logo span {
-  margin-top: 10px;
   font-size: 14px;
 }
 .navbar-brand {
   font-weight: bold;
 }
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-  width: 50px;
+.navbar-form {
+  width: 70%;
+}
+.navbar .dropdown-menu {
   left: -3rem;
+}
+.bars-icon,
+.cart-icon {
+  font-size: 20px;
+}
+@media screen and (max-width: 670px) {
+  .navbar .dropdown-menu {
+    left: 0.5rem;
+  }
+  .nav-right {
+    margin-bottom: 0px;
+    flex-grow: 1;
+  }
 }
 /* --------------Sidebar----------------- */
 .sidebar-container {

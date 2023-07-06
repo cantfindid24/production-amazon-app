@@ -14,7 +14,7 @@ export default function SearchBox() {
     e.target.reset();
   };
   return (
-    <Form className="d-flex me-auto w-100" onSubmit={submitHandler}>
+    <Form className="d-flex me-auto navbar-form" onSubmit={submitHandler}>
       <InputGroup>
         <FormControl
           type="text"

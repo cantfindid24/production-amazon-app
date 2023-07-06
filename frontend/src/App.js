@@ -66,85 +66,91 @@ function App() {
           <Navbar
             bg="dark"
             variant="dark"
-            expand="lg"
             className="navbar"
             style={{ opacity: '1', zIndex: '2500' }}
           >
-            <Container>
-              <Button
-                className="me-2"
-                variant="dark"
-                onClick={() => {
-                  setSidebarisopen(!sidebarisopen);
-                }}
-              >
-                {' '}
-                <i className="fas fa-bars"></i>{' '}
-              </Button>
-              <LinkContainer to="/">
-                <Navbar.Brand>
-                  <div className="amazon-logo">
-                    <img src={logo} alt="amazon" />
-                    <span>.in</span>
-                  </div>
-                </Navbar.Brand>
-              </LinkContainer>
-              <Navbar.Toggle
-                aria-controls="basic-navbar-nav"
-                className="border-0"
-              />
-              <Navbar.Collapse id="basic-navbar-nav">
+            <nav className="nav-hold">
+              <nav className="nav-left">
+                <Button
+                  className="me-2"
+                  variant="dark"
+                  onClick={() => {
+                    setSidebarisopen(!sidebarisopen);
+                  }}
+                >
+                  {' '}
+                  <i className="fas fa-bars bars-icon"></i>{' '}
+                </Button>
+                <LinkContainer to="/" className="me-2">
+                  <Navbar.Brand>
+                    <div className="amazon-logo">
+                      <img src={logo} alt="amazon" />
+                      <span>.in</span>
+                    </div>
+                  </Navbar.Brand>
+                </LinkContainer>
+              </nav>
+
+              <nav className="nav-middle">
                 <SearchBox />
-                <Nav className="me-auto w-100 justify-content-end">
-                  <Link to="/cart" className="nav-link">
-                    <i className="fa fa-shopping-cart text-white"></i>
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                      </Badge>
-                    )}
+                <Link to="/cart" className="nav-link">
+                  <i className="fa fa-shopping-cart text-white cart-icon"></i>
+                  {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    </Badge>
+                  )}
+                </Link>
+              </nav>
+            </nav>
+            <Nav className="me -auto nav-right">
+              {userInfo ? (
+                <NavDropdown
+                  title={userInfo.name}
+                  className="basic-nav-dropdown"
+                  id="basic-nav-dropdown"
+                >
+                  <LinkContainer to="/profile">
+                    <NavDropdown.Item>User Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/orderhistory">
+                    <NavDropdown.Item>Order History</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Divider />
+                  <Link
+                    className="dropdown-item"
+                    to="#signout"
+                    onClick={signoutHandler}
+                  >
+                    Sign Out
                   </Link>
-                  {userInfo ? (
-                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                      <LinkContainer to="/profile">
-                        <NavDropdown.Item>User Profile</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Order History</NavDropdown.Item>
-                      </LinkContainer>
-                      <NavDropdown.Divider />
-                      <Link
-                        className="dropdown-item"
-                        to="#signout"
-                        onClick={signoutHandler}
-                      >
-                        Sign Out
-                      </Link>
-                    </NavDropdown>
-                  ) : (
-                    <Link className="nav-link" to="/signin">
-                      Sign In
-                    </Link>
-                  )}
-                  {userInfo && userInfo.isAdmin && (
-                    <NavDropdown title="Admin" id="admin-nav-dropdown">
-                      <LinkContainer to="/admin/dashboard">
-                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/productlist">
-                        <NavDropdown.Item>Products</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/orderlist">
-                        <NavDropdown.Item>Orders</NavDropdown.Item>
-                      </LinkContainer>
-                      <LinkContainer to="/admin/userlist">
-                        <NavDropdown.Item>Users</NavDropdown.Item>
-                      </LinkContainer>
-                    </NavDropdown>
-                  )}
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
+                </NavDropdown>
+              ) : (
+                <Link className="nav-link" to="/signin">
+                  Sign In
+                </Link>
+              )}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown
+                  title="Admin"
+                  id="admin-nav-dropdown"
+                  className="admin-nav-dropdown"
+                >
+                  <LinkContainer to="/admin/dashboard">
+                    <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/productlist">
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/orderlist">
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/userlist">
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
+              )}
+            </Nav>
           </Navbar>
         </header>
         {/* -------Sidebar------- */}
