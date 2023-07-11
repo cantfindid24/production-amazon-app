@@ -46,7 +46,7 @@ export default function Footer() {
             <img src={logo} alt="footer/logo" />
           </div>
           <Nav className="nav">
-            {categories.map((category) => (
+            {/* {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
                   to={{
@@ -76,7 +76,7 @@ export default function Footer() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="text-white">Cocacola</Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
 
             <Nav.Item>
               <Nav.Link className="text-white">

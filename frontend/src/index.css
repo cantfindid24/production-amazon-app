@@ -281,8 +281,10 @@ main {
 }
 
 .footer {
+  margin-top: 5rem;
   background-color: #040714 !important;
   color: white;
+  font-size: small;
 }
 
 section {
