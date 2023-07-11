@@ -47,7 +47,10 @@ function Product(props) {
             Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)} variant="dark">
+          <Button
+            onClick={() => addToCartHandler(product)}
+            variant="dark btn btn-sm"
+          >
             Add to cart
           </Button>
         )}

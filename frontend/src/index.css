@@ -30,7 +30,7 @@ main {
 }
 .product {
   border: 0.1px #dcd4d4 solid;
-  margin: 1rem;
+  margin: 0rem;
 }
 .product {
   transition: all 0.5s;

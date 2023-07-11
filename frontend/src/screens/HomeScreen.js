@@ -48,7 +48,7 @@ function HomeScreen() {
       </Helmet>
       <Banner />
       <div className="mx-5 mt-3">
-        <h1>Featured products</h1>
+        <h1>Featured Products</h1>
         <div className="products">
           {loading ? (
             <LoadingBox />
