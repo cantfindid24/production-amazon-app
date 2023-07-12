@@ -59,7 +59,7 @@ main {
   height: 80px;
 }
 .small-container {
-  max-width: 200px;
+  max-width: 700px;
 }
 
 /* --------------Checkout-Steps--------------- */
@@ -366,4 +366,58 @@ section {
   .copyright > p {
     font-size: 0.95rem;
   }
+}
+
+/* ---------------Sign in Screen    Sign up Screen----------------- */
+
+.amazon-sign-card {
+  width: 350px;
+  min-height: 340px;
+  padding: 20px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 20px auto 24px auto;
+}
+
+.amazon-sign-card h1 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.amazon-sign-card .label {
+  font-size: 13px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  font-weight: 700;
+}
+
+.amazon-sign-card .control {
+  width: 283px;
+  margin: 3px auto;
+  padding: 10px 10px;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  outline: none;
+}
+
+.amazon-sign-card .amazon-button {
+  width: 283px;
+  margin-top: 20px;
+  font-weight: 500;
+  height: 35px;
+  background-color: #f0c14b;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  background-image: linear-gradient(#f7da90 #ffc000);
+  border-radius: 4px;
+}
+
+.amazon-sign-card .amazon-button:hover {
+  color: #000000;
 }
