@@ -75,7 +75,7 @@ function ProductScreen(props) {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className="m-4">
       <Row>
         <Col md={6}>
           <img

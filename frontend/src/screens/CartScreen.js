@@ -38,7 +38,7 @@ const CartScreen = () => {
   };
 
   return (
-    <div>
+    <div className="m-4">
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>

@@ -47,7 +47,7 @@ function HomeScreen() {
         <title>Amazon</title>
       </Helmet>
       <Banner />
-      <div className="mx-5 mt-3">
+      <div className="mx-5 mt-4">
         <h1>Featured Products</h1>
         <div className="products">
           {loading ? (

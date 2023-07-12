@@ -49,7 +49,7 @@ export default function ShippingAddressScreen() {
   };
 
   return (
-    <div>
+    <div className="m-4">
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
