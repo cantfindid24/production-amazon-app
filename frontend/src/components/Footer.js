@@ -57,26 +57,7 @@ export default function Footer() {
                   <Nav.Link> {category}</Nav.Link>
                 </LinkContainer>
               </Nav.Item>
-            ))}
-
-            <Nav.Item>
-              <Nav.Link className="text-white">Puma</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="text-white">Adidas</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="text-white">Nike</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="text-white">Firebolt</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="text-white">Cadbury</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="text-white">Cocacola</Nav.Link>
-            </Nav.Item> */}
+            ))} */}
 
             <Nav.Item>
               <Nav.Link className="text-white">
@@ -102,6 +83,35 @@ export default function Footer() {
               -Ankit Mehra <br /> All Rights Reserved 2023
             </p>
           </div>
+          <Nav className="nav wrapper">
+            <ul>
+              <li className="facebook">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="twitter">
+                <a href="#">
+                  <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="instagram">
+                <a href="#">
+                  <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="google">
+                <a href="#">
+                  <i class="fa fa-google fa-2x" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="whatsapp">
+                <a href="#">
+                  <i className="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </Nav>
         </Container>
       </section>
     </div>
